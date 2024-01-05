@@ -5,7 +5,6 @@ import PieGraph from "./Pie";
 import { DataObj } from "../Redux/data";
 import { useDispatch } from "react-redux";
 import { CHANGE_DATA } from "../Redux/Actiontype";
-import MyComposedChart from "./CChart";
 
 const Home = ({ cat }) => {
     const dispatch = useDispatch()

@@ -12,6 +12,7 @@ import {
 import { Bar, Pie, Doughnut } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 import Table from "./Table";
+import { Flex } from "@chakra-ui/react";
 
 const PieGraph = () => {
   const files = useSelector((state) => state.pie_data);
@@ -66,11 +67,13 @@ const PieGraph = () => {
   return (
     <div className="nut">
       <div className="doug">
-        <div>
-          <img
-            src="https://i.ibb.co/7GYv7hj/Screenshot-2024-01-05-075335.png"
-            alt="top supplier"
-          />
+        <div className="bigbig">
+          <p>Top 3 Suppliers contributing to Category-1</p>
+          <div className="flx">
+            <div ><p></p><span>Supplier-1</span><span>64%</span></div>
+            <div ><p></p><span>Supplier-2</span><span>32%</span></div>
+            <div ><p></p><span>Supplier-3</span><span>15%</span></div>
+          </div>
         </div>
         <div>
           <div>

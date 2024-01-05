@@ -9,6 +9,54 @@
 height: 47px;
 flex-shrink: 0;
 }
+.flx{
+  display: flex;
+  justify-content: space-around;
+  
+
+flex-shrink: 0;
+}
+
+.bigbig{
+  border-radius: 12px;
+border: 1px solid #EBEBEB;
+background: #FFF;
+padding: 15px;
+}
+.bigbig>p{
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.flx div{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+}
+.flx div>span:nth-child(2){
+  color: grey;
+  font-size: 13px;
+
+}
+.flx div:nth-child(1)>p{
+  border-radius: 16px;
+background: #7C95EA;width: 12px;
+height: 12px;
+}
+.flx div:nth-child(2)>p{
+  border-radius: 16px;
+background: #FFC400;width: 12px;
+height: 12px;
+}
+.flx div:nth-child(3)>p{
+  border-radius: 16px;
+background: #3BB85E;width: 12px;
+height: 12px;
+}
+.flx div>span:nth-child(3){
+  font-size: 18px;
+  font-weight: 600;
+}
 .logoDiv{
   border-bottom: 1px solid #000;
   display: flex;
