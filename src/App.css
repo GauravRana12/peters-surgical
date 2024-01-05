@@ -50,7 +50,7 @@ gap: 5px;
 .beta{
   color: #02AB6C;
 
-font-family: HelveticaNeue;
+
 font-size: 12px;
 font-style: normal;
 font-weight: 400;
@@ -102,7 +102,7 @@ gap: 12px;
 .st>span{
   color: black;
 
-font-family: HelveticaNeue;
+
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -130,7 +130,7 @@ border-radius: 32px;
    right: 29px;
    top: 16px;
 text-align: center;
-font-family: HelveticaNeue;
+
 font-size: 12px;
 font-style: normal;
 line-height: normal;
@@ -145,7 +145,7 @@ line-height: normal;
   margin-left: 30px;
 }
 .first_one{
-  width: 280px;
+  width: 320px;
 height: 145px;
 flex-direction: column;
 justify-content: flex-end;
@@ -162,7 +162,6 @@ box-shadow: 0px 0.599px 5.32px 0px rgba(0, 0, 0, 0.01), 0px 2.01px 17.869px 0px 
   gap: 3px;
 align-items: center;
 margin: 15px 25px 5px 25px;
-font-family: HelveticaNeue;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -174,7 +173,7 @@ line-height: normal;
   gap: 3px;
 
 margin: 15px 25px 5px 25px;
-font-family: HelveticaNeue;
+
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -225,7 +224,7 @@ box-shadow: 0px 0.599px 5.32px 0px rgba(0, 0, 0, 0.01), 0px 2.01px 17.869px 0px 
 }
 .firstL>p:nth-child(1){
   color: #FFF;
-font-family: HelveticaNeue;
+
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
@@ -239,7 +238,7 @@ gap: 10px;
 .firstL>p:nth-child(2){
   color: rgba(255, 255, 255, 0.84);
   text-align: center;
-  font-family: HelveticaNeue;
+  
   font-size: 46px;
   font-style: normal;
   font-weight: 400;
@@ -300,7 +299,7 @@ flex-shrink: 0;
 }
 .barLine>p{
   color: #FFF;
-font-family: HelveticaNeue;
+
 font-size: 14px;
 font-style: normal;
 font-weight: bold;
@@ -317,7 +316,7 @@ background: #FFF;
 }
 .doug>div:nth-child(2)>div>p{
   
-font-family: HelveticaNeue;
+
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
@@ -517,6 +516,7 @@ box-shadow: 0px 0.599px 5.32px 0px rgba(0, 0, 0, 0.01), 0px 2.01px 17.869px 0px 
     display: flex;
     justify-content: space-between;
   }
+  
 }
 .respon{
   background-color:#2C2C2C;

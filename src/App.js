@@ -15,7 +15,7 @@ function App() {
     <div className="App">
     <ResNav />
     <Flex>
-    <Sidebar />
+    <Sidebar setCat={setCat}/>
     <Home cat={cat}/>
     </Flex>
       

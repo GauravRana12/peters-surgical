@@ -1,7 +1,7 @@
 import { Button, Container, Flex, Menu, MenuButton, MenuItem, MenuList, Select, Stack, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({setCat}) => {
   
   return (
     <div className='sidebarDiv'>
@@ -34,11 +34,11 @@ const Sidebar = () => {
     Energy
   </MenuButton>
   <MenuList>
-    <MenuItem>Category 1</MenuItem>
-    <MenuItem>Category 3</MenuItem>
-    <MenuItem>Category 4</MenuItem>
-    <MenuItem>Category 6</MenuItem>
-    <MenuItem>Category 7</MenuItem>
+    <MenuItem onClick={()=>setCat('Category-1')}>Category 1</MenuItem>
+    <MenuItem onClick={()=>setCat('Category-3')}>Category 3</MenuItem>
+    <MenuItem onClick={()=>setCat('Category-4')}>Category 4</MenuItem>
+    <MenuItem onClick={()=>setCat('Category-6')}>Category 6</MenuItem>
+    <MenuItem onClick={()=>setCat('Category-7')}>Category 7</MenuItem>
   </MenuList>
 </Menu>
          </Container>

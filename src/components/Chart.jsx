@@ -5,9 +5,11 @@ import { useSelector } from "react-redux";
 export default function Graph(props) {
     const {emmissions,revenue}=useSelector((state)=>state.data);
     console.log( 'data files', emmissions);
+
+    const [graphHeight, setGraphHeight] = useState(400);
   const [options, setOptions] = useState({
     chart: {
-      height: 350,
+      height: graphHeight,
       type: "line",
     },
     stroke: {
@@ -67,12 +69,12 @@ export default function Graph(props) {
         {
           name: "E/R-2023",
           type: "line",
-          data: [10, 16, 20, 22, 25,22,45,40,42,39,26,43,20]
+          data: [10, 16, 20, 22, 25,22,45,40,42,39,26,43]
         },
         {
               name:'E/R-2022',
               type:'line',
-              data:[12, 18, 22, 25, 29,26,40,45,37,28,39,20]
+              data:[12, 18, 22, 25, 29,26,40,45,37,28,39]
         },
         {
             name:'Emissions-2022',
@@ -81,6 +83,23 @@ export default function Graph(props) {
         }
       ])
   },[emmissions])
+
+  useEffect(() => {
+    // Update graph height when window is resized
+    const handleResize = () => {
+      setGraphHeight(window.innerWidth > 600 ? 400 : 250); // Adjust the heights as needed
+    };
+    handleResize();
+
+    // Attach event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   return (
     <div className="barLine">
@@ -92,7 +111,7 @@ export default function Graph(props) {
         options={options}
         series={series}
         type='line'
-        height={350}
+        height={graphHeight}
       />
     </div>
       
