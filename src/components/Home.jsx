@@ -1,7 +1,19 @@
-import { Container, Image } from "@chakra-ui/react";
+import { Container, Flex, Image } from "@chakra-ui/react";
 import React from "react";
+import Chart from "./Chart";
+import PieGraph from "./Pie";
+import { DataObj } from "../Redux/data";
+import { useDispatch } from "react-redux";
+import { CHANGE_DATA } from "../Redux/Actiontype";
 
 const Home = ({ cat }) => {
+    const dispatch = useDispatch()
+    const onDateChange =(e)=>{
+let payload  = DataObj[e.target.value];
+let emmissions = payload?.map((ele)=>ele.Emissions)
+let revenue = payload?.map((ele)=>ele.Revenue)
+dispatch({type:CHANGE_DATA,payload:{emmissions,revenue}})
+    }
   return (
     <div className="main">
       <div className="top">
@@ -80,6 +92,20 @@ const Home = ({ cat }) => {
           <span className="sp">1</span>
         </div>
       </div>
+
+      <Flex justifyContent={'end'} width={'full'} pt={'10px'}>
+      <div className="inp">
+       <p>Show Time:</p>
+       <select onChange={onDateChange} className="selc">
+        <option value='data1 ' >Mar'23 - Apr'23</option>
+        <option   value='data2'>Feb'23 - Aug'23</option>
+        <option  value='data3'>Apr'23 - Jun'23</option>
+        <option  value='data4'>Jan'23 - Nov'23</option>
+       </select>
+    </div>
+      </Flex>
+    
+
       <div className="upchart">
         <div className="first">
           <div className="first_one">
@@ -192,7 +218,10 @@ const Home = ({ cat }) => {
             <p>143</p>
           </div>
         </div>
+        <Chart />
+        <PieGraph />
       </div>
+       
     </div>
   );
 };
