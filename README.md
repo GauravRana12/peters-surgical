@@ -1,5 +1,4 @@
 <h1>PETERS SURGICAL</h1>
-<h2>Live Link- https://effulgent-melba-8ff631.netlify.app/ </h2> 
 <h3>Project Presentation Link - https://drive.google.com/file/d/1UTwlkfRk9RiymhkJnrKPSd4mwxVSKBdA/view?usp=sharing</h3>
 
 # Peter Surgical React App
